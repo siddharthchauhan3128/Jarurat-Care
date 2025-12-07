@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarurat Care</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+     rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <h2><i class="fa-solid fa-hand-holding-dollar"></i> Jarurat Care </h2>
+        <p class="subtitle"> Donation tracking Dashboard</p>
+    </header>
+    <main class="main-layout container">
+        <div class="row">
+            <div class="card card-info ms-3 mt-3 md-3 ">
+            <div class="card-body">
+                <h6 class="card-text">Total Donations</h6>
+                <h4 class="card-title " id="totalDonations">&#8377;0</h4>
+            </div>
+        </div>
+
+        <div class="card card-info ms-3 mt-3 md-3 ">
+            <div class="card-body">
+                <h6 class="card-text">Number of Donors</h6>
+                <h4 class="card-title" id="totalDonors">0</h4>
+            </div>
+        </div>
+        <div class="card card-info ms-3 mt-3 md-3 lg-3">
+            <div class="card-body">
+                <h6 class="card-text">Total Donations(Count)</h6>
+                <h4 class="card-title" id="totalDonationsCount">0</h4>
+            </div>
+        </div>
+
+        <div class="card card-info ms-3 mt-3 md-3">
+            <div class="card-body">
+                <h6 class="card-text">Average Donation</h6>
+                <h4 class="card-title" id="averageDonation">&#8377;0</h4>
+            </div>
+        </div>
+        <!-- Charts  -->
+                <div class="card-graph mt-5">
+                <div class="card-header">
+                    <h2>Donation Trends</h2>
+                    <p class="subtitle">Monthly total donations (dummy data)</p>
+                </div>
+                <div class="card-body">
+                    <canvas id="donationChart"></canvas>
+                </div>
+            </div>
+            <div class="card card-table mt-5">
+                <div class="card-header">
+                <h2>Recent Donations</h2>
+                <p class="subtitle">Dummy data representing recent donors</p>
+                </div>
+                <div class="card-body table-wrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Donor</th>
+                        <th>Amount (₹)</th>
+                        <th>Date</th>
+                        <th>Campaign</th>
+                    </tr>
+                    </thead>
+                    <tbody id="donationTableBody">
+                    <!-- Filled by JS -->
+                    </tbody>
+                </table>
+                </div>
+            </div>    
+        </div>
+    </main>
+    
+  <footer class="footer">
+    <p>Jarurat Care &copy; 2025 · Dummy dashboard for assessment</p>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>
